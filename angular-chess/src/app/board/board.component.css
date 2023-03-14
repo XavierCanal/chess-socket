@@ -1,0 +1,8 @@
+.board {
+  height: 392px;
+  width: 392px;
+  border-style: solid;
+}
+.board-row {
+  display: flex;
+}

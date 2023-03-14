@@ -1,0 +1,27 @@
+<div class="list-container" cdkDropListGroup>
+  <div class="todo-container column-container">
+    <div class="list"
+      cdkDropList
+      [cdkDropListData] = "todos"
+      (cdkDropListDropped)="onDrop($event)">
+      <h2>Tech to learn</h2>
+      <div style="border-style: solid;" *ngFor="let todo of todos" cdkDrag>
+          name: {{todo.name}}
+          category: {{todo.category}}
+      </div>
+    </div>
+  </div>
+
+  <div class="done-container column-container">
+    <div class="list"
+    cdkDropList
+    [cdkDropListData]="completed"
+    (cdkDropListDropped)="onDrop($event)">
+      <h2>Tech learned</h2>
+      <div style="border-style: solid;" *ngFor="let complete of completed" cdkDrag>
+          name: {{complete.name}}
+          category: {{complete.category}}
+      </div>
+    </div>
+  </div>
+</div>
